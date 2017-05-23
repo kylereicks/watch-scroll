@@ -12,7 +12,7 @@
 export default class {
 
 	/**
-	 * @summary Constructor: Setup initial data and optionaly initialize watch process.
+	 * @summary Constructor: Setup initial data and optionally initialize watch process.
 	 *
 	 * @since 0.1.0
 	 *
@@ -186,7 +186,7 @@ export default class {
 	setupEvents() {
 
 		/**
-		 * A reference to checkPosition that can be canceled via the cancel funciton.
+		 * A reference to checkPosition that can be canceled via the cancel function.
 		 *
 		 * @since 0.1.0
 		 * @property {function} scrollHandler - checkPosition.
@@ -271,7 +271,7 @@ export default class {
 				}
 			}
 		}
-		if ( ( 'boolean' === typeof this.conditionsMatch && conditionsMatch !== this.conditionsMatch ) || this.onEveryScrollEvent || ( 'all' === this.conditions && statusChange ) ) {
+		if ( ( ( 'boolean' === typeof this.conditionsMatch || null === this.conditionsMatch ) && conditionsMatch !== this.conditionsMatch ) || this.onEveryScrollEvent || ( 'all' === this.conditions && statusChange ) ) {
 			if ( 'all' !== this.conditionsMatch ) {
 				this.conditionsMatch = conditionsMatch;
 			}
